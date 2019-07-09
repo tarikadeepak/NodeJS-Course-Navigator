@@ -9,13 +9,12 @@ module.exports = app => {
 
   login = (req, res) => {
   const user = req.body;
-  console.log('User req ', req);
-  console.log('User Details ', user);
-  console.log('Now  ', user.username, user.password)
+  console.log('User received ', user)
   userModel.findUserByCredentials(user.username, user.password)
     .then(user => {
       req.session['currentUser'] = user;
-      res.send(req.session);
+      console.log('User sent ', req.session.currentUser)
+      res.send(req.session.currentUser);
     });
 };
 

@@ -1,5 +1,6 @@
 module.exports = app => {
   const userModel = require('../models/user/user.model.server');
+  const fileModel = require('../models/file/file.model.server');
 
   findAllUsers = (req, res) =>
     userModel.findAllUsers()

@@ -1,0 +1,9 @@
+applications:
+- name: WEBDEV-SUMMER-2018-DT-NODE
+  memory: 256M
+  instances: 1
+  path: .
+  domain: cfapps.io
+  command: npm install && npm start
+  services:
+  - UserInquiry
